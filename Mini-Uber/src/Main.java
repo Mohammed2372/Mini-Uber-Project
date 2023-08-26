@@ -10,6 +10,7 @@ public class Main {
         String location,destination,ride;
         int choiceLoc,choiceDest,choiceRide;
         int confirmation = 1;
+        int confirmation2 = 1;
 
         //price for distance
         map.display(1);
@@ -23,6 +24,7 @@ public class Main {
         else {
             location = scanner.next();
         }
+
         // choosing destination
         map.display(1);
         System.out.print("Destination: ");
@@ -39,27 +41,29 @@ public class Main {
         if(confirmation == 0) {
             System.out.println("\t \t -process canceled-");
             main(args);
-        }
-        //price for the ride
-        rides.display(1);
-        System.out.println("choose type of ride you want by word or number");
-        if (scanner.hasNextInt()){  // to make the user able to choose with numbers
-            choiceRide = scanner.nextInt();
-            ride = rides.ridesList.get(choiceRide-1);
+            confirmation = 1;
         }
         else {
-            ride = scanner.next();
+
+            //price for the ride
+            rides.display(1);
+            System.out.println("choose type of ride you want by word or number");
+            if (scanner.hasNextInt()) {  // to make the user able to choose with numbers
+                choiceRide = scanner.nextInt();
+                ride = rides.ridesList.get(choiceRide - 1);
+            } else {
+                ride = scanner.next();
+            }
+            System.out.println("the total price will be: " + tp.totalPrice(location, destination, ride));
+            System.out.println("type 1 to confirm, 0 to cancel");
+            confirmation2 = scanner.nextInt();
+            if (confirmation2 == 0) {
+                System.out.println("\t \t -process canceled-");
+                main(args);
+                confirmation2 = 1;
+            } else
+                System.out.println(tp.totalPrice(location, destination, ride));
         }
-        System.out.println("the total price will be: " + tp.totalPrice(location,destination,ride));
-        System.out.println("type 1 to confirm, 0 to cancel" );
-        confirmation = scanner.nextInt();
-        if(confirmation == 0) {
-            System.out.println("\t \t -process canceled-");
-            main(args);
-        }
 
-
-
-        scanner.close();
     }
 }

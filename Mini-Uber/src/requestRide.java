@@ -3,13 +3,39 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class requestRide {
-    Map<String,Integer> locationAndPriceMap = new HashMap<>();
-    ArrayList<String> locationList = new ArrayList<>();
+    HashMap<String,Integer> locationAndPriceMap = new HashMap<>();
+    ArrayList<String> locationList ;
     public requestRide(){
-        locationAndPriceMap.put("cairo",2000);
-        locationAndPriceMap.put("banha",1500);
-        locationAndPriceMap.put("qena",2500);
-        locationAndPriceMap.put("alex",3000);
+        locationAndPriceMap.put("Shobra Elkhiema",2000);
+        locationAndPriceMap.put("Aabass",3000);
+        locationAndPriceMap.put("Ain Shams",2500);
+        locationAndPriceMap.put("Elmarg",3000);
+        locationAndPriceMap.put("Nasr City",3000);
+        locationAndPriceMap.put("Elshiekh zayed",3000);
+        locationAndPriceMap.put("Elmokatam",3000);
+        locationAndPriceMap.put("Elmaady",3000);
+        locationAndPriceMap.put("Elaataba",3000);
+        locationAndPriceMap.put("Elzamalek",3000);
+        locationAndPriceMap.put("Down Town",3000);
+        locationAndPriceMap.put("Elmohandseen",3000);
+        locationAndPriceMap.put("Elaabasya",3000);
+        locationAndPriceMap.put("Masr Elgededa",3000);
+        locationAndPriceMap.put("Hadaek Elzayton",3000);
+        locationAndPriceMap.put("Ramses",3000);
+        locationAndPriceMap.put("Ezbet Elnakhl",3000);
+        locationAndPriceMap.put("Elameria",3000);
+        locationAndPriceMap.put("Elhaykesteb",3000);
+        locationAndPriceMap.put("6 october",3000);
+        locationAndPriceMap.put("Elmehwar",3000);
+        locationAndPriceMap.put("Helwan",3000);
+        locationAndPriceMap.put("Hadaek Elahram",3000);
+        locationAndPriceMap.put("First tagamoa",3000);
+        locationAndPriceMap.put("Fifth tagamoa",3000);
+        locationAndPriceMap.put("Elabour",3000);
+        locationAndPriceMap.put("10's Of Ramadan",3000);
+        locationAndPriceMap.put("Elsaida Aa'sha",3000);
+        locationAndPriceMap.put("Elharam",3000);
+        //locationAndPriceMap.put("",3000);
 
         // initializing list with map keys
         locationList = new ArrayList<>(locationAndPriceMap.keySet());
@@ -19,7 +45,10 @@ public class requestRide {
         if(choice == 1) {   //display the list of locations
             int i = 1;
             for (String key : locationList) {
-                System.out.print(i + "." + key + "\t");
+                System.out.print(i + "." + key + "    ");
+                if(i % 10 == 0){
+                    System.out.println();
+                }
                 i++;
             }
             System.out.println();

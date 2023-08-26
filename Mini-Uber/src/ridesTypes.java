@@ -4,9 +4,9 @@ import java.util.Map;
 
 public class ridesTypes {
 
-    Map<String, Float> ridesAndPriceMap = new HashMap<>();
-    ArrayList<String> ridesList = new ArrayList<>();
-    ArrayList<Float> priceList = new ArrayList<>();
+    HashMap<String, Float> ridesAndPriceMap = new HashMap<>();
+    ArrayList<String> ridesList;
+    ArrayList<Float> priceList;
 
     public ridesTypes(){
         //initializing rides map (constant)
