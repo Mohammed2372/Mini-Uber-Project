@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class requestRide {
-    HashMap<String,Integer> locationAndPriceMap = new HashMap<>();
+    Map<String,Integer> locationAndPriceMap = new LinkedHashMap<>();
     ArrayList<String> locationList ;
     public requestRide(){
         locationAndPriceMap.put("Shobra Elkhiema",2000);
@@ -35,7 +36,7 @@ public class requestRide {
         locationAndPriceMap.put("10's Of Ramadan",3000);
         locationAndPriceMap.put("Elsaida Aa'sha",3000);
         locationAndPriceMap.put("Elharam",3000);
-        //locationAndPriceMap.put("",3000);
+        locationAndPriceMap.put("",3000);
 
         // initializing list with map keys
         locationList = new ArrayList<>(locationAndPriceMap.keySet());

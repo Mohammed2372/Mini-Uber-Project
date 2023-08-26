@@ -1,19 +1,20 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class ridesTypes {
 
-    HashMap<String, Float> ridesAndPriceMap = new HashMap<>();
+    Map<String, Float> ridesAndPriceMap = new LinkedHashMap<>();
     ArrayList<String> ridesList;
     ArrayList<Float> priceList;
 
     public ridesTypes(){
         //initializing rides map (constant)
-        ridesAndPriceMap.put("normal Car",1f);
-        ridesAndPriceMap.put("Motorcycle",.5f);
         ridesAndPriceMap.put("VIP Car",2f);
+        ridesAndPriceMap.put("normal Car",1f);
         ridesAndPriceMap.put("Bus",.8f);
+        ridesAndPriceMap.put("Motorcycle",.5f);
 
         // initializing list with map keys and values
         ridesList = new ArrayList<>(ridesAndPriceMap.keySet());
