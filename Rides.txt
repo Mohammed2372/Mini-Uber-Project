@@ -1,0 +1,4 @@
+VIP Car - 2.0
+normal Car - 1.0
+Bus - 0.8
+Motorcycle - 0.5
