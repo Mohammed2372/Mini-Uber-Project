@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -11,10 +10,7 @@ public class ridesTypes {
 
     public ridesTypes(){
         //initializing rides map (constant)
-        ridesAndPriceMap.put("VIP Car",2f);
-        ridesAndPriceMap.put("normal Car",1f);
-        ridesAndPriceMap.put("Bus",.8f);
-        ridesAndPriceMap.put("Motorcycle",.5f);
+       FileManager.readRides(ridesAndPriceMap);
 
         // initializing list with map keys and values
         ridesList = new ArrayList<>(ridesAndPriceMap.keySet());
