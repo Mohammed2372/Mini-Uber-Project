@@ -2,6 +2,8 @@ package registeration;
 
 public class Driver extends User {
 
+    public java.lang.System System;
+
     public Driver(){
         registeration();
     };
