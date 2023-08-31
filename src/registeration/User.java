@@ -6,7 +6,7 @@ public abstract class User {
     String name;
     String email;
     String password;
-   String phoneNumber;
+    String phoneNumber;
 
     void registeration(User user) {
 
