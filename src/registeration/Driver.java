@@ -39,6 +39,7 @@ public class Driver extends User {
         email = scanner.next();
         System.out.println("Enter your password:");
         password = scanner.next();
+        Validation.confirmingPassword(password);
         System.out.println("Enter your phone number:");
         phoneNumber = scanner.next();
         System.out.println("Enter your car number");
