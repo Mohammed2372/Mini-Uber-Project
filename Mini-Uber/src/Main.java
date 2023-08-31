@@ -8,7 +8,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
 
-        System.out.println("1 for register, 2 request");
+        System.out.println("Enter 1 for registration OR 2 for request");
         int requestorregister = scanner.nextInt();
 
         if (requestorregister == 1) {
@@ -16,7 +16,7 @@ public class Main {
             Passenger ppp = new Passenger();
             ////
 
-        } else {
+        } else if (requestorregister == 2){
             //////
             requestRide requestRide = new requestRide();
             ridesTypes ridesT = new ridesTypes();

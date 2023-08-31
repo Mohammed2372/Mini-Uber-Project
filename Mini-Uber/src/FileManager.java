@@ -34,7 +34,7 @@ public class FileManager {
         locationAndPriceMap.put("Fifth tagamoa",3000);
         locationAndPriceMap.put("Elabour",3000);
         locationAndPriceMap.put("10's Of Ramadan",3000);
-        locationAndPriceMap.put("Elsaida Aa'sha",3000);
+        locationAndPriceMap.put("Elsaida Aa'sha",3000); 
         locationAndPriceMap.put("Elharam",3000);
         locationAndPriceMap.put("",3000);
 

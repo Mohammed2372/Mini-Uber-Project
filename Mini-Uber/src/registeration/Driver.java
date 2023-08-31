@@ -1,12 +1,17 @@
 package registeration;
 
+import java.util.Scanner;
+
 public class Driver extends User {
 
     public java.lang.System System;
 
-    public Driver(){
-        registeration();
-    };
+
+    //    static Driver driver = new Driver();
+    public Driver() {
+    }
+
+    ;
 
     public Driver(String name, String email, String password, String phoneNumber) {
         this.name = name;
@@ -17,10 +22,11 @@ public class Driver extends User {
 
     @Override
     void registeration() {
-         super.registeration();
-         Validation.checkphone(FileReader.getdataInstance().getDrivers(), phoneNumber);
+        super.registeration();
+        Validation.checkphone(FileReader.getdataInstance().getDrivers(), phoneNumber);
 
     }
+
 }
 
 
