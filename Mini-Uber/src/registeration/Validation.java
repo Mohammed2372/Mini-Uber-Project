@@ -13,7 +13,7 @@ class Validation{
             return check;
         };
 
-        public void assignUser(Vector<User> vector, User user, boolean check){
+        static void assignUser(Vector<User> vector, User user, boolean check){
             if (check){
                 vector.addElement(user);
                 System.out.println("user added");

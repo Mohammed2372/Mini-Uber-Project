@@ -11,7 +11,6 @@ public class Passenger extends User{
         this.password = password;
         this.phoneNumber = phoneNumber;
     }
-
     @Override
     void registeration(User passenger){
             Scanner scanner = new Scanner(System.in);

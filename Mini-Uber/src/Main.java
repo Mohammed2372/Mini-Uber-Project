@@ -1,12 +1,11 @@
 import registeration.*;
+
 import java.util.Scanner;
-import java.util.Vector;
 
 public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-
 
         System.out.println("Enter 1 for registration OR 2 for request");
         int requestorregister = scanner.nextInt();

@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import Trip.*;
 
 public class FileManager {
     public static void writeLocations()

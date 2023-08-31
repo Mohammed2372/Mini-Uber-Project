@@ -8,7 +8,7 @@ public abstract class User {
     String password;
    String phoneNumber;
 
-    void registeration() {
+    void registeration(User user) {
 
     }
 }
