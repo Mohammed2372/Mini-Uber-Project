@@ -2,8 +2,21 @@ package registeration;
 import java.util.Scanner;
 
 public class Passenger extends User{
-    Passenger passenger = new Passenger();
-    public Passenger(){};
+
+    private Passenger(){}
+    private static volatile Passenger passenger = null;
+    public static Passenger getInstance(){
+        Passenger result = passenger;
+        if(result == null){
+            synchronized(Passenger.class){
+                result = passenger;
+                if(result == null){
+                    result = passenger = new Passenger();
+                }
+            }
+        }
+        return result;
+    }
 
     public Passenger(String name, String email, String password, String phoneNumber) {
         this.name = name;

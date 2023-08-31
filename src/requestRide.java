@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -13,38 +8,34 @@ public class requestRide {
     ArrayList<String> locationList;
 
     public requestRide() {
-        FileManager.readLocations(this.locationAndPriceMap);
-        this.locationList = new ArrayList(this.locationAndPriceMap.keySet());
+        //initializing locations map (constant)
+        locationAndPriceMap = FileManager.readLocations();
+        // initializing list with map keys
+        locationList = new ArrayList<>(locationAndPriceMap.keySet());
     }
 
     public void display(int choice) {
-        int i;
-        Iterator var3;
-        if (choice == 1) {
-            i = 1;
 
-            for(var3 = this.locationList.iterator(); var3.hasNext(); ++i) {
-                String key = (String)var3.next();
-                System.out.print("" + i + "." + key + "    ");
+        if (choice == 1) {   //display the list of locations
+            int i = 1;
+            for (String key : locationList) {
+                System.out.print(i + "." + key + "    ");
                 if (i % 10 == 0) {
                     System.out.println();
                 }
+                i++;
             }
-
             System.out.println();
-        } else if (choice == 2) {
-            i = 1;
-
-            for(var3 = this.locationAndPriceMap.entrySet().iterator(); var3.hasNext(); ++i) {
-                Map.Entry<String, Integer> entry = (Map.Entry)var3.next();
-                String key = (String)entry.getKey();
-                int value = (Integer)entry.getValue();
-                System.out.println("" + i + "." + key + ": " + value + "\t");
+        } else if (choice == 2) {   // display map
+            int i = 1;
+            for (Map.Entry<String, Integer> entry : locationAndPriceMap.entrySet()) {
+                String key = entry.getKey();
+                int value = entry.getValue();
+                System.out.println(i + "." + key + ": " + value + "\t");
+                i++;
             }
-
             System.out.println();
         }
-
     }
 
     public float getPrice(String location) {

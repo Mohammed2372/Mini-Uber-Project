@@ -1,56 +1,50 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+
 public class ridesTypes {
-    Map<String, Float> ridesAndPriceMap = new LinkedHashMap();
+
+    Map<String, Float> ridesAndPriceMap = new LinkedHashMap<>();
     ArrayList<String> ridesList;
     ArrayList<Float> priceList;
 
     public ridesTypes() {
-        FileManager.readRides(this.ridesAndPriceMap);
-        this.ridesList = new ArrayList(this.ridesAndPriceMap.keySet());
-        this.priceList = new ArrayList(this.ridesAndPriceMap.values());
+        //initializing rides map (constant)
+        ridesAndPriceMap = FileManager.readRides();
+
+        // initializing list with map keys and values
+        ridesList = new ArrayList<>(ridesAndPriceMap.keySet());
+        priceList = new ArrayList<>(ridesAndPriceMap.values());
+
     }
 
     public void display(int choice) {
-        int i;
-        Iterator var3;
-        if (choice == 1) {
-            i = 1;
-
-            for(var3 = this.ridesList.iterator(); var3.hasNext(); ++i) {
-                String key = (String)var3.next();
-                System.out.print("" + i + "." + key + "\t");
+        if (choice == 1) {   //display the list of locations
+            int i = 1;
+            for (String key : ridesList) {
+                System.out.print(i + "." + key + "\t");
+                i++;
             }
-
             System.out.println();
-        } else if (choice == 2) {
-            i = 1;
-
-            for(var3 = this.ridesAndPriceMap.entrySet().iterator(); var3.hasNext(); ++i) {
-                Map.Entry<String, Float> entry = (Map.Entry)var3.next();
-                String key = (String)entry.getKey();
-                float value = (Float)entry.getValue();
-                System.out.printf("" + i + "." + key + ": " + value + "\t");
+        } else if (choice == 2) {   // display map
+            int i = 1;
+            for (Map.Entry<String, Float> entry : ridesAndPriceMap.entrySet()) {
+                String key = entry.getKey();
+                float value = entry.getValue();
+                System.out.printf(i + "." + key + ": " + value + "\t");
+                i++;
             }
-
             System.out.println();
         }
-
     }
 
     public float getPrice(String ride) {
-        return (Float)this.ridesAndPriceMap.get(ride);
+        return ridesAndPriceMap.get(ride);
     }
 
     public float calculateRide(float ridePrice, String rideType) {
-        return ridePrice * this.getPrice(rideType);
+        return ridePrice * getPrice(rideType);
     }
+
 }

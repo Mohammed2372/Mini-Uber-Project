@@ -1,23 +1,12 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Iterator;
+import java.io.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class FileManager {
-    public FileManager() {
-    }
 
+public class FileManager {
     public static void writeLocations() {
-        Map<String, Integer> locationAndPriceMap = new LinkedHashMap();
+        Map<String, Integer> locationAndPriceMap = new LinkedHashMap<>();
+
         locationAndPriceMap.put("Shobra Elkhiema", 2000);
         locationAndPriceMap.put("Aabass", 3000);
         locationAndPriceMap.put("Ain Shams", 2500);
@@ -51,86 +40,75 @@ public class FileManager {
 
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter("Locations.txt"));
-            Iterator var2 = locationAndPriceMap.entrySet().iterator();
-
-            while(var2.hasNext()) {
-                Map.Entry<String, Integer> entry = (Map.Entry)var2.next();
-                String var10001 = (String)entry.getKey();
-                writer.write(var10001 + " - " + String.valueOf(entry.getValue()) + "\n");
+            for (Map.Entry<String, Integer> entry : locationAndPriceMap.entrySet()) {
+                writer.write(entry.getKey() + " - " + entry.getValue() + "\n");
             }
-
             writer.close();
-        } catch (IOException var4) {
-            System.out.println(var4);
+        } catch (IOException ex) {
+            System.out.println(ex);
         }
-
     }
 
-    public static Map<String, Integer> readLocations(Map<String, Integer> locationAndPriceMap) {
+    public static Map<String, Integer> readLocations() {
+        Map<String, Integer> resultMap = new LinkedHashMap<>();
+
         try {
             BufferedReader reader = new BufferedReader(new FileReader("Locations.txt"));
-
             String Line;
-            while((Line = reader.readLine()) != null) {
+            while ((Line = reader.readLine()) != null) {
                 String[] parts = Line.split(" - ");
                 if (parts.length == 2) {
                     String key = parts[0].trim();
                     int value = Integer.parseInt(parts[1].trim());
-                    locationAndPriceMap.put(key, value);
+
+                    resultMap.put(key, value);
                 }
             }
-
             reader.close();
-        } catch (IOException var6) {
-            System.out.println(var6);
+        } catch (IOException ex) {
+            System.out.println(ex);
         }
 
-        return locationAndPriceMap;
+        return resultMap;
     }
 
     public static void writeRides() {
-        Map<String, Float> ridesAndPriceMap = new LinkedHashMap();
-        ridesAndPriceMap.put("VIP Car", 2.0F);
-        ridesAndPriceMap.put("normal Car", 1.0F);
-        ridesAndPriceMap.put("Bus", 0.8F);
-        ridesAndPriceMap.put("Motorcycle", 0.5F);
+        Map<String, Float> ridesAndPriceMap = new LinkedHashMap<>();
+
+        ridesAndPriceMap.put("VIP Car", 2f);
+        ridesAndPriceMap.put("normal Car", 1f);
+        ridesAndPriceMap.put("Bus", .8f);
+        ridesAndPriceMap.put("Motorcycle", .5f);
 
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("Rides.txt.txt"));
-            Iterator var2 = ridesAndPriceMap.entrySet().iterator();
-
-            while(var2.hasNext()) {
-                Map.Entry<String, Float> entry = (Map.Entry)var2.next();
-                String var10001 = (String)entry.getKey();
-                writer.write(var10001 + " - " + String.valueOf(entry.getValue()) + "\n");
+            BufferedWriter writer = new BufferedWriter(new FileWriter("Rides.txt"));
+            for (Map.Entry<String, Float> entry : ridesAndPriceMap.entrySet()) {
+                writer.write(entry.getKey() + " - " + entry.getValue() + "\n");
             }
-
             writer.close();
-        } catch (IOException var4) {
-            System.out.println(var4);
+        } catch (IOException ex) {
+            System.out.println(ex);
         }
-
     }
 
-    public static Map<String, Float> readRides(Map<String, Float> ridesAndPriceMap) {
-        Map<String, Float> resultMap = new LinkedHashMap();
+    public static Map<String, Float> readRides() {
+        Map<String, Float> resultMap = new LinkedHashMap<>();
 
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("Rides.txt.txt"));
-
+            BufferedReader reader = new BufferedReader(new FileReader("Rides.txt"));
             String Line;
-            while((Line = reader.readLine()) != null) {
+            while ((Line = reader.readLine()) != null) {
                 String[] parts = Line.split(" - ");
                 if (parts.length == 2) {
                     String key = parts[0].trim();
                     Float value = Float.parseFloat(parts[1].trim());
+
                     resultMap.put(key, value);
                 }
             }
-
             reader.close();
-        } catch (IOException var7) {
-            System.out.println(var7);
+        } catch (IOException ex) {
+            System.out.println(ex);
         }
 
         return resultMap;
