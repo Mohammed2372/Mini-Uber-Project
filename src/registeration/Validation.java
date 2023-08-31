@@ -5,7 +5,7 @@ import java.util.Vector;
 class Validation{
     static boolean checkphone(Vector<User> vector, String phoneNumber){
         boolean check = true;
-        for(int i = 0; i<2; i++){
+        for(int i = 0; i< vector.size(); i++){
             if(phoneNumber.equals( vector.get(i).phoneNumber)){
                 System.out.println("This phone number is already exist!");
                 check = false;

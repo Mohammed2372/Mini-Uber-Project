@@ -25,7 +25,7 @@ public class Passenger extends User{
         this.phoneNumber = phoneNumber;
     }
     @Override
-    void registeration(User passenger){
+    public void registeration(User passenger){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your name:");
         name = scanner.next();
@@ -35,7 +35,10 @@ public class Passenger extends User{
         password = scanner.next();
         System.out.println("Enter your phone number:");
         phoneNumber = scanner.next();
-        Validation.assignUser(FileReader.getdataInstance().getPassengers(), passenger, Validation.checkphone(FileReader.getdataInstance().getPassengers(), passenger.phoneNumber));
+
+        passenger = new Passenger(name, email, password, phoneNumber);
+
+        Validation.assignUser(fileReader.getdataInstance().getPassengers(), passenger, Validation.checkphone(fileReader.getdataInstance().getPassengers(), passenger.phoneNumber));
 
     }
 }

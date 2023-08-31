@@ -47,7 +47,23 @@ public class Driver extends User {
         System.out.println("Enter you car's color");
         carColor = scanner.next();
 
-        Validation.checkphone(FileReader.getdataInstance().getDrivers(), phoneNumber);
+        driver = new Driver(name, email, password, phoneNumber, carNumber, carColor);
+        //Validation.checkphone(fileReader.getdataInstance().getDrivers(), phoneNumber);
+        Validation.assignUser(FileReader.getdataInstance().getDrivers(), driver, Validation.checkphone(FileReader.getdataInstance().getDrivers(), driver.phoneNumber));
+    }
+    public String getCarColor() {
+        return carColor;
     }
 
+    public void setCarColor(String carColor) {
+        this.carColor = carColor;
+    }
+
+    public String getCarNumber() {
+        return carNumber;
+    }
+
+    public void setCarNumber(String carNumber) {
+        this.carNumber = carNumber;
+    }
 }

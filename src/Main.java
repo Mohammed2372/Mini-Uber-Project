@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
+        fileReader.readFiles();
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter 1 for registration OR 2 for request");
@@ -23,7 +23,10 @@ public class Main {
         }
 
         if (requestorregister == 1) {
-            driver.registeration(driver);
+            if (choose == 1)
+                driver.registeration(driver);
+            else if (choose == 2)
+                passenger.registeration(passenger);
 
             ////
 
@@ -87,5 +90,7 @@ public class Main {
                 main(args);
             }
         }
+        FileManager.writeDrivers();
+        FileManager.writePassengers();
     }
 }
