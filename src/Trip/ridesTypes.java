@@ -10,7 +10,7 @@ import java.util.Map;
 public class ridesTypes {
 
     Map<String, Float> ridesAndPriceMap = new LinkedHashMap<>();
-    ArrayList<String> ridesList;
+    public ArrayList<String> ridesList;
     ArrayList<Float> priceList;
 
     public ridesTypes() {

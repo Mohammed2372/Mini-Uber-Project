@@ -29,7 +29,7 @@ public class Main {
         System.out.println("Enter 1 for registration OR 2 for request");
         int requestorregister = scanner.nextInt();
 
-        System.out.println("1- for driver & 2- for passenger");
+        System.out.println("1- for driver & 2- for passenger & 3- for login");
         int choose = scanner.nextInt();
         Driver driver = Driver.getInstance();
 

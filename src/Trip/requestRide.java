@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class requestRide {
     Map<String, Integer> locationAndPriceMap = new LinkedHashMap();
-    ArrayList<String> locationList;
+    public ArrayList<String> locationList;
 
     public requestRide() {
         //initializing locations map (constant)
