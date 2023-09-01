@@ -1,5 +1,5 @@
 package PaymentType;
 
-abstract class Payment {
-    abstract void pay(int amount);
+public abstract class Payment {
+    public abstract  void pay(int amount);
 }

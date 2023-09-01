@@ -4,7 +4,7 @@ package Trip;//
 //
 
 public class totalTripPrice {
-    totalTripPrice() {
+    public totalTripPrice() {
     }
 
     public float totalPrice(String location, String destination, String rideType) {

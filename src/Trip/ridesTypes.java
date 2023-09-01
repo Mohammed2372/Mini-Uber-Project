@@ -9,9 +9,9 @@ import java.util.Map;
 
 public class ridesTypes {
 
-    Map<String, Float> ridesAndPriceMap = new LinkedHashMap<>();
-    ArrayList<String> ridesList;
-    ArrayList<Float> priceList;
+    public Map<String, Float> ridesAndPriceMap = new LinkedHashMap<>();
+    public ArrayList<String> ridesList;
+    public ArrayList<Float> priceList;
 
     public ridesTypes() {
         //initializing rides map (constant)

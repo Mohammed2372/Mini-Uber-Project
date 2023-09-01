@@ -1,0 +1,1 @@
+Payment of $100 made using PaymentType.Visa.
