@@ -1,1 +1,4 @@
-Payment of $100 made using PaymentType.Visa.
+Payment of $64 made using visa.
+Payment of $64 made using visa.
+Payment of $64 made using visa.
+Payment of $81 made using visa.

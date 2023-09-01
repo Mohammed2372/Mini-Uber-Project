@@ -11,14 +11,6 @@ public class Visa extends Payment {
     public void pay(int amount) {
         // Save the payment information to a file.
         // FileWriter to save the data That's Example : modify it to the calsses you named " Files Admin " !!!?
-
-
-        try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("visa_payments.txt"));
-            writer.write("Payment of $" + amount + " made using PaymentType.Visa.");
-            writer.close();
-        } catch (IOException ex) {
-            System.out.println(ex);
-        }
+        visaPayments.addElement(amount);
     }
 }

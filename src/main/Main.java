@@ -8,6 +8,8 @@ import Trip.requestRide;
 import Trip.ridesTypes;
 import Trip.totalTripPrice;
 import registeration.*;
+
+import java.io.File;
 import java.util.Scanner;
 
 public class Main {
@@ -115,7 +117,10 @@ public class Main {
         Payment cash = new Cash();
         Payment visa = new Visa();
 
-        cash.pay(1);
-        visa.pay(100);
+        cash.pay(9);
+        visa.pay(81);
+
+        FileManager.writeCashPayments();
+        FileManager.writeVisaPayments();
     }
 }
