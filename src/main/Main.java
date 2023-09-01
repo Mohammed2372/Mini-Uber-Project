@@ -1,3 +1,11 @@
+package main;
+
+import Files.FileManager;
+import PaymentType.Payment;
+import PaymentType.Visa;
+import Trip.requestRide;
+import Trip.ridesTypes;
+import Trip.totalTripPrice;
 import registeration.*;
 
 import java.util.Scanner;
@@ -6,6 +14,17 @@ public class Main {
     public static void main(String[] args) {
         fileReader.readFiles();
         Scanner scanner = new Scanner(System.in);
+
+
+        ///payment
+        // Create a PaymentType.Visa payment object.
+        Payment payment = new Visa();
+
+        // Make a payment of $100.
+        payment.pay(100);
+
+
+
 
         System.out.println("Enter 1 for registration OR 2 for request");
         int requestorregister = scanner.nextInt();

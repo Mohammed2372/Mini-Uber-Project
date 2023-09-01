@@ -49,7 +49,7 @@ public class Driver extends User {
 
         driver = new Driver(name, email, password, phoneNumber, carNumber, carColor);
         //Validation.checkphone(fileReader.getdataInstance().getDrivers(), phoneNumber);
-        Validation.assignUser(FileReader.getdataInstance().getDrivers(), driver, Validation.checkphone(FileReader.getdataInstance().getDrivers(), driver.phoneNumber));
+        Validation.assignUser(fileReader.getdataInstance().getDrivers(), driver, Validation.checkphone(fileReader.getdataInstance().getDrivers(), driver.phoneNumber));
     }
     public String getCarColor() {
         return carColor;
