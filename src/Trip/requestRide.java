@@ -1,6 +1,6 @@
 package Trip;
 
-import Files.FileManager;
+import Files.LocationManager;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -12,7 +12,7 @@ public class requestRide {
 
     public requestRide() {
         //initializing locations map (constant)
-        locationAndPriceMap = FileManager.readLocations();
+        locationAndPriceMap = LocationManager.readLocations();
         // initializing list with map keys
         locationList = new ArrayList<>(locationAndPriceMap.keySet());
     }

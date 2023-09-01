@@ -1,6 +1,6 @@
 package main;
 
-import Files.FileManager;
+import Files.*;
 import PaymentType.Cash;
 import PaymentType.Payment;
 import PaymentType.Visa;
@@ -111,8 +111,8 @@ public class Main {
                 main(args);
             }
         }
-        FileManager.writeDrivers();
-        FileManager.writePassengers();
+        DriverManager.writeDrivers();
+        PassengerManager.writePassengers();
 
         Payment cash = new Cash();
         Payment visa = new Visa();
@@ -120,7 +120,7 @@ public class Main {
         cash.pay(9);
         visa.pay(81);
 
-        FileManager.writeCashPayments();
-        FileManager.writeVisaPayments();
+        CashManager.writeCashPayments();
+
     }
 }

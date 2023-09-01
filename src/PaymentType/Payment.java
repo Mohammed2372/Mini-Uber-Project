@@ -1,6 +1,7 @@
 package PaymentType;
 
-import Files.FileManager;
+import Files.CashManager;
+import Files.VisaManager;
 
 import java.util.Vector;
 
@@ -10,8 +11,8 @@ public abstract class Payment {
     public static Vector<Integer> visaPayments;
 
     public Payment(){
-        cashPayments = FileManager.readCashPayments();
-        visaPayments = FileManager.readVisaPayments();
+        cashPayments = CashManager.readCashPayments();
+        visaPayments = VisaManager.readVisaPayments();
     }
     public abstract  void pay(int amount);
 }
