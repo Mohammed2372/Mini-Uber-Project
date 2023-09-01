@@ -1,6 +1,6 @@
 package Trip;
 
-import Files.FileManager;
+import Files.RideManager;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -9,13 +9,12 @@ import java.util.Map;
 
 public class ridesTypes {
 
-    Map<String, Float> ridesAndPriceMap = new LinkedHashMap<>();
+    public Map<String, Float> ridesAndPriceMap = new LinkedHashMap<>();
     public ArrayList<String> ridesList;
-    ArrayList<Float> priceList;
-
+    public ArrayList<Float> priceList;
     public ridesTypes() {
         //initializing rides map (constant)
-        ridesAndPriceMap = FileManager.readRides();
+        ridesAndPriceMap = RideManager.readRides();
 
         // initializing list with map keys and values
         ridesList = new ArrayList<>(ridesAndPriceMap.keySet());

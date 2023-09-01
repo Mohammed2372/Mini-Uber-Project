@@ -1,6 +1,7 @@
 package main;
 
-import Files.FileManager;
+import Files.*;
+import PaymentType.Cash;
 import PaymentType.Payment;
 import PaymentType.Visa;
 import Trip.requestRide;
@@ -8,6 +9,7 @@ import Trip.ridesTypes;
 import Trip.totalTripPrice;
 import registeration.*;
 
+import java.io.File;
 import java.util.Scanner;
 
 public class Main {
@@ -109,7 +111,16 @@ public class Main {
                 main(args);
             }
         }
-        FileManager.writeDrivers();
-        FileManager.writePassengers();
+        DriverManager.writeDrivers();
+        PassengerManager.writePassengers();
+
+        Payment cash = new Cash();
+        Payment visa = new Visa();
+
+        cash.pay(9);
+        visa.pay(81);
+
+        CashManager.writeCashPayments();
+
     }
 }

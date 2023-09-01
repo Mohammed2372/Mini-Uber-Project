@@ -1,7 +1,5 @@
 package login;
-
 import registeration.Passenger;
-
 import java.util.Scanner;
 
 public class Log {

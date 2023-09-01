@@ -2,9 +2,6 @@ package MainMenu;
 import Trip.requestRide;
 import Trip.ridesTypes;
 import Trip.totalTripPrice;
-import main.*;
-import registeration.*;
-import login.*;
 
 import java.util.Scanner;
 
