@@ -1,5 +1,9 @@
-Payment of $8 made using cash.
-Payment of $8 made using cash.
-Payment of $8 made using cash.
-Payment of $9 made using cash.
-Payment of $9 made using cash.
+Payment of $8.0 made using cash.
+Payment of $8.0 made using cash.
+Payment of $8.0 made using cash.
+Payment of $9.0 made using cash.
+Payment of $9.0 made using cash.
+Payment of $2000.0 made using cash.
+Payment of $2000.0 made using cash.
+Payment of $4400.0 made using cash.
+Payment of $1500.0 made using cash.

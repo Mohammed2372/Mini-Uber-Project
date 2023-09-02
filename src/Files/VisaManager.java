@@ -20,7 +20,7 @@ public class VisaManager {
         }
     }
     public static Vector<Float> readVisaPayments() {
-        Vector<Float> resultVector = new Vector();
+        Vector<Float> resultVector = new Vector<>();
 
         try {
             BufferedReader reader = new BufferedReader(new FileReader("visa_payments.txt"));

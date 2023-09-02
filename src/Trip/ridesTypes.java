@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class ridesTypes {
 
-    public Map<String, Float> ridesAndPriceMap = new LinkedHashMap<>();
+    public Map<String, Float> ridesAndPriceMap = RideManager.readRides();
     public ArrayList<String> ridesList;
     public ArrayList<Float> priceList;
     public ridesTypes() {

@@ -1,5 +1,7 @@
 package PaymentType;
 
+import Files.VisaManager;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -12,5 +14,6 @@ public class Visa extends Payment {
         // Save the payment information to a file.
         // FileWriter to save the data That's Example : modify it to the calsses you named " Files Admin " !!!?
         visaPayments.addElement(amount);
+        VisaManager.writeVisaPayments();
     }
 }

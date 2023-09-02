@@ -1,5 +1,7 @@
 package registeration;
 
+import Files.DriverManager;
+
 import java.util.Scanner;
 
 public class Registeration {
@@ -14,6 +16,8 @@ public class Registeration {
         Validation.confirmingPassword(user.password);
         System.out.println("Enter your phone number:");
         user.phoneNumber = scanner.next();
+
+
     }
     public static void driverRegistraion(Driver driver){
         passengerRegisteration(driver);

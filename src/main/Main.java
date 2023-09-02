@@ -1,15 +1,20 @@
 package main;
-import Files.*;
+import Files.CashManager;
+import Files.DriverManager;
+import Files.PassengerManager;
 import MainMenu.Menu;
-import PaymentType.*;
-import Trip.*;
-import registeration.*;
-import java.util.Scanner;
+import registeration.Driver;
+import registeration.ReadFile;
+
 
 public class Main {
     public static void main(String[] args) {
-        ReadFile.readFiles();
+        ReadFile.passengers = PassengerManager.readPassengers();
+        ReadFile.drivers = DriverManager.readDrivers();
 
         Menu m1 = new Menu();
+
+        DriverManager.writeDrivers();
+        PassengerManager.writePassengers();
     }
 }

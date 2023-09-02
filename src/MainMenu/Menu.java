@@ -2,12 +2,11 @@ package MainMenu;
 import login.*;
 import registeration.*;
 
-import javax.xml.validation.Validator;
 import java.util.Scanner;
 
 public class Menu {
     Scanner scanner = new Scanner(System.in);
-    Log log = new Log();
+    LoginDisplay log = new LoginDisplay();
     public Menu() {
         boolean again = true;
         do {
@@ -16,11 +15,12 @@ public class Menu {
             if (pda == 1) { // passenger
                 boolean againn = false;
                 do {
-                    System.out.println("Enter 1 for Register, 2 for Login");
+                    System.out.println("Enter 1 for Register, 2 for Login, 0 for roll back");
                     int rl = scanner.nextInt();
                     if (rl == 1) { // register
                         Passenger passenger = new Passenger();
                         Registeration.passengerRegisteration(passenger);
+
                         Validation v1 = new Validation();
                         if(!v1.checkphone(ReadFile.getdataInstance().getPassengers(),passenger.getPhoneNumber())){
                             againn = true ;
@@ -32,7 +32,12 @@ public class Menu {
                             DisplayTrip dt = new DisplayTrip();
                         }
                     } else if (rl == 2) { // login
-                       log.log(rl);
+                        if(log.LoginDisplay(pda)) {
+                            DisplayTrip dt = new DisplayTrip();
+                        }
+                        else againn = true;
+                    } else if (rl == 0) {
+                        againn = false;
                     } else {
                         againn = true;
                         System.out.println("please enter valid number (1 or 2)");
@@ -41,7 +46,7 @@ public class Menu {
             } else if (pda == 2) { // driver
                 boolean againn = false;
                 do {
-                    System.out.println("Enter 1 for Register, 2 for Login");
+                    System.out.println("Enter 1 for Register, 2 for Login, 0 for roll back");
                     int rl = scanner.nextInt();
                     if (rl == 1) { // register
                         Driver driver = new Driver();
@@ -57,8 +62,15 @@ public class Menu {
                             DisplayTrip dt = new DisplayTrip();
                         }
                     } else if (rl == 2) { // login
-                        log.log(rl);
-                    } else {
+                        if(log.LoginDisplay(pda)) {
+                            DisplayTrip dt = new DisplayTrip();
+                        }
+                        else againn = true;
+                    }
+                    else if (rl == 0) {
+                        againn = false;
+                    }
+                    else {
                         againn = true;
                         System.out.println("please enter valid number (1 or 2)");
                     }
@@ -68,7 +80,7 @@ public class Menu {
 
              else if(pda == 0) {
                 again = false;
-                System.out.println("bye bye, stupid");
+                System.out.println("bye bye ...");
             }
              else{
                 again = true;

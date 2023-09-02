@@ -17,16 +17,8 @@ public class Driver extends User {
     public String getCarColor() {
         return carColor;
     }
-
-    public void setCarColor(String carColor) {
-        this.carColor = carColor;
-    }
-
     public String getCarNumber() {
         return carNumber;
     }
 
-    public void setCarNumber(String carNumber) {
-        this.carNumber = carNumber;
-    }
 }

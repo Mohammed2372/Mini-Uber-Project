@@ -13,7 +13,6 @@ public class DriverManager {
             BufferedWriter writer = new BufferedWriter(new FileWriter("Drivers.txt"));
             for (var driver : ReadFile.getdataInstance().getDrivers()) {
                 driver = (Driver) driver;
-                System.out.println(driver.getName() + " - " + driver.getEmail() + " - " + driver.getPhoneNumber() + " - " + driver.getPassword() + " - " + ((Driver) driver).getCarNumber() + " - " + ((Driver) driver).getCarColor() + "\n");
                 writer.write(driver.getName() + " - " + driver.getEmail() + " - " + driver.getPhoneNumber() + " - " + driver.getPassword() + " - " + ((Driver) driver).getCarNumber() + " - " + ((Driver) driver).getCarColor() + "\n");
             }
             writer.close();

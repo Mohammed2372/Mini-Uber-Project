@@ -6,18 +6,15 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class requestRide {
-    public Map<String, Integer> locationAndPriceMap = new LinkedHashMap<>();
+    public Map<String, Integer> locationAndPriceMap = LocationManager.readLocations();
     public ArrayList<String> locationList;
-
     public requestRide() {
         //initializing locations map (constant)
         locationAndPriceMap = LocationManager.readLocations();
         // initializing list with map keys
         locationList = new ArrayList<>(locationAndPriceMap.keySet());
     }
-
     public void display(int choice) {
-
         if (choice == 1) {   //display the list of locations
             int i = 1;
             for (String key : locationList) {

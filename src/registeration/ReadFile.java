@@ -1,20 +1,28 @@
 package registeration;
+import Files.DriverManager;
+import Files.PassengerManager;
+import login.PassengerL;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Vector;
 
 public class ReadFile {
-    static Vector<User> passengers;
-    static Vector<User> drivers;
+    public static Vector<User> passengers;
+    public static Vector<User> drivers;
     private static ReadFile dataInstance = new ReadFile();
     private ReadFile() {
+        passengers = PassengerManager.readPassengers();
+        drivers = DriverManager.readDrivers();
     }
 
-    public static void readFiles() {
-        passengers = readPassengers();
-        drivers = readDrivers();
-    }
+
+
+//    public static void readFiles() {
+//        passengers = readPassengers();
+//        drivers = readDrivers();
+//    }
 
     public static ReadFile getdataInstance() {
         return ReadFile.dataInstance;

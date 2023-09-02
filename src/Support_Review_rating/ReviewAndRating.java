@@ -1,4 +1,4 @@
-package srt;
+package Support_Review_rating;
 
 import java.util.Scanner;
 

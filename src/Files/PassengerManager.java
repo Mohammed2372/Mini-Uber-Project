@@ -15,7 +15,6 @@ public class PassengerManager {
             BufferedWriter writer = new BufferedWriter(new FileWriter("Passengers.txt"));
             for (var p : ReadFile.getdataInstance().getPassengers()) {
                 p = (Passenger) p;
-                System.out.println(p.getName() + " - " + p.getEmail() + " - " + p.getPhoneNumber() + " - " + p.getPassword() + "\n");
                 writer.write(p.getName() + " - " + p.getEmail() + " - " + p.getPhoneNumber() + " - " + p.getPassword() + "\n");
             }
             writer.close();

@@ -1,19 +1,30 @@
 package login;
 
+import registeration.Driver;
+import registeration.ReadFile;
+import registeration.User;
+
 import java.util.Vector;
 
 public class DriverL extends Login{
-    DriverL(String username, String password) {
+    public DriverL(){
+    }
+    public DriverL(String username, String password) {
         super(username, password);
     }
     public boolean DriverAuthenticate(String userPhonenumber, String userPassword) {
-        Vector<Login> drivers = FileReaderL.getdataInstance().getDrivers();
+        Vector<User> drivers = ReadFile.getdataInstance().getDrivers();
         boolean exist = false;
-        for (Login driver : drivers) {
-            if (userPhonenumber.equals(driver.phoneNumber) && userPassword.equals(driver.password)) {
+        for (User driver : drivers) {
+            if (userPhonenumber.equals(driver.getPhoneNumber()) && userPassword.equals(driver.getPassword())) {
+                System.out.println("Login Accepted\n");
                 exist = true;
-                System.out.println("This phone number is already exist!");
+                break;
             }
+        }
+        if (!exist)
+        {
+            System.out.println("Login Refuesd\n");
         }
         return exist;
     }

@@ -3,8 +3,8 @@ import PaymentType.DisplayPayment;
 import Trip.requestRide;
 import Trip.ridesTypes;
 import Trip.totalTripPrice;
-import srt.ReviewAndRating;
-import srt.Supporting;
+import Support_Review_rating.ReviewAndRating;
+import Support_Review_rating.Supporting;
 
 import java.util.Scanner;
 

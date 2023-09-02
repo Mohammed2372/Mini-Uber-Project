@@ -25,8 +25,8 @@ public class DisplayPayment {
             visa.pay(totalTripPrice);
         }
 
-        DriverManager.writeDrivers();
-        PassengerManager.writePassengers();
+//        DriverManager.writeDrivers();
+//        PassengerManager.writePassengers();
 
         CashManager.writeCashPayments();
 

@@ -1,4 +1,8 @@
-Payment of $64 made using visa.
-Payment of $64 made using visa.
-Payment of $64 made using visa.
-Payment of $81 made using visa.
+Payment of $64.0 made using visa.
+Payment of $64.0 made using visa.
+Payment of $64.0 made using visa.
+Payment of $81.0 made using visa.
+Payment of $100.0 made using visa.
+Payment of $100.0 made using visa.
+Payment of $100.0 made using visa.
+Payment of $3000.0 made using visa.

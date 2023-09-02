@@ -20,7 +20,7 @@ public class CashManager {
         }
     }
     public static Vector<Float> readCashPayments() {
-        Vector<Integer> resultVector = new Vector<Integer>();
+        Vector<Float> resultVector = new Vector<Float>();
 
         try {
             BufferedReader reader = new BufferedReader(new FileReader("cash_payments.txt"));
@@ -32,9 +32,9 @@ public class CashManager {
                 Matcher matcher = pattern.matcher(line);
 
                 while (matcher.find()) {
-                    int integer = Integer.parseInt(matcher.group(1));
+                    float floater = Float.parseFloat(matcher.group(1));
 
-                    resultVector.addElement(integer);
+                    resultVector.addElement(floater);
                 }
             }
 
