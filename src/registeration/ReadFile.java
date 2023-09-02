@@ -1,16 +1,14 @@
 package registeration;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Vector;
 
-public class fileReader {
+public class ReadFile {
     static Vector<User> passengers;
     static Vector<User> drivers;
-    private static fileReader dataInstance = new fileReader();
-
-    private fileReader() {
+    private static ReadFile dataInstance = new ReadFile();
+    private ReadFile() {
     }
 
     public static void readFiles() {
@@ -18,8 +16,8 @@ public class fileReader {
         drivers = readDrivers();
     }
 
-    public static fileReader getdataInstance() {
-        return fileReader.dataInstance;
+    public static ReadFile getdataInstance() {
+        return ReadFile.dataInstance;
     }
 
     public Vector<User> getPassengers() {
@@ -52,10 +50,8 @@ public class fileReader {
         } catch (IOException ex) {
             System.out.println(ex);
         }
-
         return resultVector;
     }
-
     public static Vector<User> readPassengers() {
         Vector<User> resultVector = new Vector<User>();
 

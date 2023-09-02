@@ -1,11 +1,9 @@
 package login;
-
 import java.util.Vector;
 
 public class FileReaderL{
     Vector<Login> passengers ;
     Vector<Login> drivers;
-
     private static FileReaderL dataInstance = new FileReaderL();
     private FileReaderL(){
         passengers = new Vector<>();
@@ -20,11 +18,9 @@ public class FileReaderL{
     public static FileReaderL getdataInstance(){
         return FileReaderL.dataInstance;
     }
-
     public Vector<Login> getPassengers() {
         return passengers;
     }
-
     public Vector<Login> getDrivers(){
         return drivers;
     }

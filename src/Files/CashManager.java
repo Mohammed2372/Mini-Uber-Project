@@ -12,14 +12,14 @@ public class CashManager {
 
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter("cash_payments.txt"));
-            for (int amount : Cash.cashPayments)
+            for (float amount : Cash.cashPayments)
                 writer.write("Payment of $" + amount + " made using cash.\n");
             writer.close();
         } catch (IOException ex) {
             System.out.println(ex);
         }
     }
-    public static Vector<Integer> readCashPayments() {
+    public static Vector<Float> readCashPayments() {
         Vector<Integer> resultVector = new Vector<Integer>();
 
         try {

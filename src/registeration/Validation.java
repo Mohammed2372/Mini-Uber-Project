@@ -2,8 +2,8 @@ package registeration;
 import java.util.Scanner;
 import java.util.Vector;
 
-class Validation{
-    static boolean checkphone(Vector<User> vector, String phoneNumber){
+public class Validation{
+    public boolean checkphone(Vector<User> vector, String phoneNumber){
         boolean check = true;
         for(int i = 0; i< vector.size(); i++){
             if(phoneNumber.equals( vector.get(i).phoneNumber)){
@@ -13,7 +13,7 @@ class Validation{
         }
         return check;
     };
-    static void confirmingPassword(String password){
+    public static void confirmingPassword(String password){
 //            boolean checkToContinue = true;
         Scanner scanner = new Scanner(System.in);
         String confirmPassword;
@@ -30,12 +30,10 @@ class Validation{
         } while (!confirmPassword.equals(password));
 //            return checkToContinue;
     };
-    static void assignUser(Vector<User> vector, User user, boolean check){
-        if (check){
-            vector.addElement(user);
-            System.out.println("user added");
-        }
-    };
+    public static void assignUser(Vector<User> vector, User user) {
+        vector.addElement(user);
+        System.out.println("user added");
+    }
 }
 
 

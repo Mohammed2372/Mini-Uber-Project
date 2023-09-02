@@ -1,5 +1,4 @@
 package login;
-import registeration.Passenger;
 import java.util.Scanner;
 
 public class Log {
@@ -7,9 +6,9 @@ public class Log {
     private PassengerL passengerL;
     public void log(int rl){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your phone number:");
+        System.out.println("Enter your phone number: ");
         String phoneNumber = scanner.next();
-        System.out.println("Enter your phone number:");
+        System.out.println("Enter your password: ");
         String password = scanner.next();
         if(rl == 1){
             passengerL.passengerAuthenticate(phoneNumber,password);

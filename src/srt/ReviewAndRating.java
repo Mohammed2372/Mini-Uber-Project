@@ -5,10 +5,7 @@ import java.util.Scanner;
 public class ReviewAndRating {
     Scanner input = new Scanner(System.in);
 
-    ReviewAndRating(){
-
-    }
-    public void reviewsAndRating()
+    public ReviewAndRating()
     {
         System.out.println("\t\t\t Welcome");
         System.out.println("About App:\nit's a transportation conglomerate that mainly provides safe taxi services where individuals can hail a taxi using their phone.");

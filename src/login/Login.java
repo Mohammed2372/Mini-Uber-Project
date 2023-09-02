@@ -7,12 +7,4 @@ public class Login {
         this.phoneNumber = username;
         this.password = password;
     }
-    public void log(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your phone number:");
-        phoneNumber = scanner.next();
-        System.out.println("Enter your phone number:");
-        password = scanner.next();
-
-    }
 }

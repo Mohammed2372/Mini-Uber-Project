@@ -8,7 +8,7 @@ import java.io.IOException;
 public class Visa extends Payment {
 
     @Override
-    public void pay(int amount) {
+    public void pay(float amount) {
         // Save the payment information to a file.
         // FileWriter to save the data That's Example : modify it to the calsses you named " Files Admin " !!!?
         visaPayments.addElement(amount);

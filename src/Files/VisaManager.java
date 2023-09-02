@@ -12,15 +12,15 @@ public class VisaManager {
 
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter("visa_payments.txt"));
-            for (int amount : Visa.visaPayments)
+            for (float amount : Visa.visaPayments)
                 writer.write("Payment of $" + amount + " made using visa.\n");
             writer.close();
         } catch (IOException ex) {
             System.out.println(ex);
         }
     }
-    public static Vector<Integer> readVisaPayments() {
-        Vector<Integer> resultVector = new Vector<Integer>();
+    public static Vector<Float> readVisaPayments() {
+        Vector<Float> resultVector = new Vector();
 
         try {
             BufferedReader reader = new BufferedReader(new FileReader("visa_payments.txt"));
@@ -32,7 +32,7 @@ public class VisaManager {
                 Matcher matcher = pattern.matcher(line);
 
                 while (matcher.find()) {
-                    int integer = Integer.parseInt(matcher.group(1));
+                    float integer = Integer.parseInt(matcher.group(1));
 
                     resultVector.addElement(integer);
                 }

@@ -1,12 +1,8 @@
 package Files;
 
-import registeration.Driver;
-import registeration.User;
-import registeration.fileReader;
+import registeration.*;
 
 import java.io.*;
-import java.util.LinkedHashMap;
-import java.util.Map;
 import java.util.Vector;
 
 public class DriverManager {
@@ -15,7 +11,7 @@ public class DriverManager {
 
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter("Drivers.txt"));
-            for (var driver : fileReader.getdataInstance().getDrivers()) {
+            for (var driver : ReadFile.getdataInstance().getDrivers()) {
                 driver = (Driver) driver;
                 System.out.println(driver.getName() + " - " + driver.getEmail() + " - " + driver.getPhoneNumber() + " - " + driver.getPassword() + " - " + ((Driver) driver).getCarNumber() + " - " + ((Driver) driver).getCarColor() + "\n");
                 writer.write(driver.getName() + " - " + driver.getEmail() + " - " + driver.getPhoneNumber() + " - " + driver.getPassword() + " - " + ((Driver) driver).getCarNumber() + " - " + ((Driver) driver).getCarColor() + "\n");
@@ -27,7 +23,7 @@ public class DriverManager {
     }
 
     public static Vector<User> readDrivers() {
-        Vector<User> resultVector = new Vector<User>();
+        Vector<User> resultVector = new Vector();
 
         try {
             BufferedReader reader = new BufferedReader(new FileReader("Drivers.txt"));
