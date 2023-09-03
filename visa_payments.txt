@@ -6,3 +6,5 @@ Payment of $100.0 made using visa.
 Payment of $100.0 made using visa.
 Payment of $100.0 made using visa.
 Payment of $3000.0 made using visa.
+Payment of $100.0 made using visa.
+Payment of $400.0 made using visa.
